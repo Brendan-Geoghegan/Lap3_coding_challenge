@@ -1,0 +1,35 @@
+/* General */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Signika Negative", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+}
+
+button,
+a {
+	cursor: pointer;
+	font-weight: 300;
+}
+
+p {
+	font-weight: 300;
+}
+
+/* Reusable PageContainer */
+
+.main-container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
+}

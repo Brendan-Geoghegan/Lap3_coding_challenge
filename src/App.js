@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './layouts'
 import { Home, NotFound, User } from './pages'
 
+import "./main.css";
+
 const App = () => {
   return (
     <Routes>
@@ -16,4 +18,3 @@ const App = () => {
 }
 
 export default App
-
