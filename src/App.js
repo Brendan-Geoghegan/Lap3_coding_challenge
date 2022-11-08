@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from "react";
-import "./main.css";
-
-const App = () => {
-	return <div>App</div>;
-};
-=======
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Layout from './layouts'
 import { Home, NotFound, User } from './pages'
+
+import "./main.css";
 
 const App = () => {
   return (
@@ -24,6 +18,3 @@ const App = () => {
 }
 
 export default App
->>>>>>> b5e13b003d8fa66a6523a5412120e35983b56c8d
-
-export default App;

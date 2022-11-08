@@ -1,8 +1,13 @@
 import React from 'react'
 
+import { UserForm } from '../../components'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <h1>Welcome!</h1>
+    <UserForm />
+    </>
   )
 }
 
