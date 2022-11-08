@@ -1,0 +1,20 @@
+/* General */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+/* Reusable PageContainer */
+
+.main-container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
