@@ -5,10 +5,25 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body {
+	font-family: "Signika Negative", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+}
 
 button,
 a {
 	cursor: pointer;
+	font-weight: 300;
+}
+
+p {
+	font-weight: 300;
 }
 
 /* Reusable PageContainer */
