@@ -1,5 +1,5 @@
 import React from "react";
-import { BackButton, Profile, RepoList } from "../../components";
+import { BackButton, Profile, RepoList, Repo } from "../../components";
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ const User = () => {
 			exit={{ opacity: 0 }}
 			className="user-container"
 		>
-			{/* <BackButton /> */}
+			<BackButton />
 			<br />
 
 			{loading ? (
@@ -23,7 +23,10 @@ const User = () => {
 			) : (
 				<>
 					<Profile />
-					<RepoList />
+					<div>
+						<RepoList />
+						<Repo />
+					</div>
 				</>
 			)}
 		</motion.div>
