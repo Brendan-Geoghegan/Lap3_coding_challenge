@@ -4,8 +4,8 @@ import { UserForm } from '../../components'
 
 const Home = () => {
   return (
-    <div class='main-container'>
-    <h1>Welcome!</h1>
+    <div className='main-container'>
+    <h1>GitHub Repo Tracker</h1>
     <UserForm />
     </div>
   )

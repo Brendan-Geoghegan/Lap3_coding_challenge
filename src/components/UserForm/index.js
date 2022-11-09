@@ -14,9 +14,10 @@ const UserForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor='username'>Enter username:</label>
+      <br/>
       <input type="text" placeholder="GitHub Username" id='username' onChange={(e) => setFormData(e.target.value)} />
       <br/>
-      <input type="submit" value="Search!" />
+      <input type="submit" value="Submit" />
     </form>
   )
 }
