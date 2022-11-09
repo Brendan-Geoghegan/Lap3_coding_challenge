@@ -4,11 +4,7 @@ import "./main.css";
 import { BackButton } from "./components";
 
 const App = () => {
-	return (
-		<main>
-			<AnimatedRoutes />
-		</main>
-	);
+	return <AnimatedRoutes />;
 };
 
 export default App;
