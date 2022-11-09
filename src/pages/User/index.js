@@ -3,6 +3,7 @@ import { BackButton, Profile, RepoList, Repo } from "../../components";
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
+import { Outlet } from "react-router-dom";
 import "./style.css";
 
 const User = () => {
@@ -23,11 +24,11 @@ const User = () => {
 					<img src={loadingGif} alt="Loading" />
 				) : (
 					<>
-						<Profile />
 						<div>
-							<RepoList />
-							<Repo />
+							<Profile />
+              <Outlet />
 						</div>
+            <RepoList />
 					</>
 				)}
 			</motion.div>

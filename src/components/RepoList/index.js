@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.css";
 
@@ -11,7 +12,7 @@ const RepoList = () => {
 			<div id="repos">
 				{allReposData.map((repo, index) => (
 					<div className="repo" key={index}>
-						<h3>{repo.name}</h3>
+						<NavLink to={repo.name}><h3>{repo.name}</h3></NavLink>
 						<a href={repo.url} target="_blank">
 							GitHub
 						</a>

@@ -77,7 +77,7 @@ export const getRepoResult = searchTerm => {
         dispatch(loadingRepo());
         try {
             const data = await fetchRepoData(searchTerm);
-            dispatch(loadRepoResult(data))
+            dispatch(loadRepoResult(data.data))
         } catch (err) {
             console.warn(err.message);
             dispatch({ type: 'SET_ERROR', payload: err.message })
@@ -88,7 +88,7 @@ export const getRepoResult = searchTerm => {
 const fetchRepoData = async searchTerm => {
     try {
         const repoData = await axios.get(`${searchTerm}`)
-        return { repoData } ;
+        return repoData ;
     } catch (err) {
         if (data.status === 404) { throw Error('That\'s not a valid repo!') }
         throw new Error(err.message)
