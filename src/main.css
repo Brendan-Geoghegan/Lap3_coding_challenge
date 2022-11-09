@@ -108,3 +108,8 @@ form:not(#label) {
 	bottom: 15px;
 	left: 40%;
 }
+
+hr {
+	width: 30%;
+	margin: 10px 0;
+}
