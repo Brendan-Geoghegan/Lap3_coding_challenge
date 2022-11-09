@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getUserResult } from "../../actions";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const UserForm = () => {
 	const [formData, setFormData] = useState("");
@@ -26,7 +27,7 @@ const UserForm = () => {
 				onChange={(e) => setFormData(e.target.value)}
 			/>
 			<br />
-			<input type="submit" value="Submit" />
+			<motion.input type="submit" value="Submit" whileTap={{ scale: 0.8 }} />
 		</form>
 	);
 };

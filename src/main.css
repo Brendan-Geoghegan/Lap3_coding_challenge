@@ -26,15 +26,15 @@ a {
 }
 
 a:hover {
-	color: #76F058;
+	color: #76f058;
 }
 
 h3 {
-	color: #58B9F0;
+	color: #58b9f0;
 }
 
 h3:hover {
-	color: #76F058;
+	color: #76f058;
 }
 
 p {
@@ -53,6 +53,7 @@ label {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 40%;
+	min-width: 480px;
 	background-color: #161b21; /* official github dark mode color */
 	border-radius: 10px;
 	padding: 50px 0;
