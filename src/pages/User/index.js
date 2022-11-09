@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { BackButton, Profile } from '../../components';
+import { BackButton, Profile, RepoList } from '../../components';
 
 const User = () => {
   return (
     <>
       <BackButton />
-      <br/>
       <Profile />
+      <br/>
+      <RepoList />
     </>
   )
 }
