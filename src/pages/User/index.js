@@ -3,6 +3,7 @@ import { BackButton, Profile, RepoList } from "../../components";
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
+import { Outlet } from "react-router-dom";
 import "./style.css";
 
 const User = () => {
@@ -24,6 +25,7 @@ const User = () => {
 				<>
 					<Profile />
 					<RepoList />
+          <Outlet />
 				</>
 			)}
 		</motion.div>
