@@ -26,7 +26,15 @@ a {
 }
 
 a:hover {
-	color: #619f23;
+	color: #76F058;
+}
+
+h3 {
+	color: #58B9F0;
+}
+
+h3:hover {
+	color: #76F058;
 }
 
 p {
