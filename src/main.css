@@ -66,6 +66,17 @@ label {
 	border: solid 1px #619f23;
 }
 
+#back {
+	width: 5%;
+    background-color: #619f23;
+    color: white;
+	font-size: 25px;
+	border: 1px solid white;
+	border-radius: 5px;
+	text-align: center;
+	margin: 5px;
+}
+
 input[type='submit'] {
 	width: 20%;
     background-color: #619f23;
@@ -76,7 +87,7 @@ input[type='submit'] {
 	text-align: center;
 }
 
-input[type='submit']:hover {
+input[type='submit']:hover, #back:hover {
 	background-color: white;
 	color: #619f23;
 	border: solid 1px #619f23;
@@ -89,4 +100,11 @@ form {
 
 form:not(#label) {
 	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 15px;
+	left: 40%;
 }
