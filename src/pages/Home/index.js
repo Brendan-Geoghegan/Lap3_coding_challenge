@@ -7,10 +7,18 @@ const Home = () => {
 	return (
 		<motion.div
 			className="main-container"
-			initial={{ boxShadow: "0 0 0 rgb(240, 240, 240, 0)" }}
+			initial={{
+				top: "-20%",
+				boxShadow: "0 0 0 rgb(240, 240, 240, 0)",
+			}}
 			animate={{
-				boxShadow: "0 0 60px rgb(240, 240, 240, 0.6)",
-				transition: { duration: 1 },
+				top: "50%",
+				boxShadow: "6px 6px 0 rgb(240, 240, 240)",
+				transition: { duration: 1.2 },
+			}}
+			whileHover={{
+				backgroundColor: "#11151a",
+				boxShadow: "8px 8px 0 rgb(240, 240, 240)",
 			}}
 		>
 			<h1>GitHub Repo Tracker</h1>
