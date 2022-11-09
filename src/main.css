@@ -7,7 +7,7 @@
 }
 body {
 	font-family: "Signika Negative", sans-serif;
-	background-color: #0D1116; /* official github dark mode color */
+	background-color: #0d1116; /* official github dark mode color */
 	color: white;
 }
 
@@ -18,10 +18,23 @@ h4 {
 	font-weight: 700;
 }
 
-button,
 a {
 	cursor: pointer;
 	font-weight: 300;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #76f058;
+}
+
+h3 {
+	color: #58b9f0;
+}
+
+h3:hover {
+	color: #76f058;
 }
 
 p {
@@ -35,15 +48,13 @@ label {
 }
 
 .main-container {
-	/* width: 90%; 
-	margin: 0 auto; 
-	max-width: 1200px; */
 	position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 40%;
-	background-color: #161B21; /* official github dark mode color */
+	min-width: 480px;
+	background-color: #161b21; /* official github dark mode color */
 	border-radius: 10px;
 	padding: 50px 0;
 	border: 1px solid white;
@@ -54,11 +65,11 @@ label {
 
 #username {
 	vertical-align: top;
-    margin: 5px auto;
-    width: 100%;
-    border: solid black 1px;
-    border-radius: 5px;
-    font-size: 25px;
+	margin: 5px auto;
+	width: 100%;
+	border: solid black 1px;
+	border-radius: 5px;
+	font-size: 25px;
 	border: solid 1px white;
 }
 
@@ -68,8 +79,8 @@ label {
 
 #back {
 	width: 5%;
-    background-color: #619f23;
-    color: white;
+	background-color: #619f23;
+	color: white;
 	font-size: 25px;
 	border: 1px solid white;
 	border-radius: 5px;
@@ -77,17 +88,18 @@ label {
 	margin: 5px;
 }
 
-input[type='submit'] {
+input[type="submit"] {
 	width: 20%;
-    background-color: #619f23;
-    color: white;
+	background-color: #619f23;
+	color: white;
 	font-size: 25px;
 	border: 1px solid white;
 	border-radius: 5px;
 	text-align: center;
 }
 
-input[type='submit']:hover, #back:hover {
+input[type="submit"]:hover,
+#back:hover {
 	background-color: white;
 	color: #619f23;
 	border: solid 1px #619f23;
@@ -95,7 +107,6 @@ input[type='submit']:hover, #back:hover {
 
 form {
 	width: 80%;
-	
 }
 
 form:not(#label) {
