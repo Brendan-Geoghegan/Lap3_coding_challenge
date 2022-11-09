@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// User reducer
+// User data
 
 const loadingUser = () => ({ type: 'LOADING'});
 
@@ -48,3 +48,38 @@ const fetchUserData = async searchTerm => {
         throw new Error(err.message)
     }
 }
+
+// individual repo data
+
+const loadingRepo = () => ({ type: 'LOADING'});
+
+const loadRepoResult = (individualRepoData) => ({
+    type: 'LOAD_REPO_RESULT',
+    payload: {
+        individualRepoData: {
+            name: individualRepoData.name,
+            html_url: individualRepoData.html_url,
+            description: individualRepoData.description,
+            created_at: individualRepoData.created_at,
+            language: individualRepoData.language,
+            forks: individualRepoData.forks,
+            open_issues: individualRepoData.open_issues,
+            topics: individualRepoData.topics,
+            watchers: individualRepoData.watchers,
+            subscribers_count: individualRepoData.subscribers_count
+        }
+    }
+    });
+
+export const getRepoResult = searchTerm => {
+    return async dispatch => {
+        dispatch(loadingUser(searchTerm));
+        try {
+            const data = await fetchUserData(searchTerm);
+            dispatch(loadUserResult(data))
+        } catch (err) {
+            console.warn(err.message);
+            dispatch({ type: 'SET_ERROR', payload: err.message })
+        };
+    };
+};

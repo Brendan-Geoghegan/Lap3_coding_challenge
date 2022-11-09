@@ -20,8 +20,8 @@ const initState = {
         created_at: "",
         language: "",
         forks: 0,
-        open_issues: "",
-        topics: "",
+        open_issues: 0,
+        topics: [],
         watchers: 0,
         subscribers_count: 0
     },
