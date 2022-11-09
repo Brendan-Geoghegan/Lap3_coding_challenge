@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// User reducer
+// User data
 
-const loadingUser = () => ({ type: 'LOADING'});
+const loadingUser = () => ({ type: 'LOADING_USER'});
 
 const loadUserResult = ({ userData, repoData }) => ({
     type: 'LOAD_USER_RESULT',
@@ -19,6 +19,7 @@ const loadUserResult = ({ userData, repoData }) => ({
             return {
                 name: data.name,
                 url: data.url,
+                html_url: data.url,
                 forks: data.forks_count
             }
         })
@@ -27,7 +28,7 @@ const loadUserResult = ({ userData, repoData }) => ({
 
 export const getUserResult = searchTerm => {
     return async dispatch => {
-        dispatch(loadingUser(searchTerm));
+        dispatch(loadingUser());
         try {
             const data = await fetchUserData(searchTerm);
             dispatch(loadUserResult(data))
@@ -44,7 +45,52 @@ const fetchUserData = async searchTerm => {
         const repoData = await axios.get(`https://api.github.com/users/${searchTerm}/repos`)
         return { userData: userData.data, repoData: repoData.data } ;
     } catch (err) {
-        if (data.status === 404) { throw Error('That\'s not a valid capital city!') }
+        if (data.status === 404) { throw Error('That\'s not a valid username!') }
+        throw new Error(err.message)
+    }
+}
+
+// individual repo data
+
+const loadingRepo = () => ({ type: 'LOADING_REPO'});
+
+const loadRepoResult = (individualRepoData) => ({
+    type: 'LOAD_REPO_RESULT',
+    payload: {
+        individualRepoData: {
+            name: individualRepoData.name,
+            html_url: individualRepoData.html_url,
+            description: individualRepoData.description,
+            created_at: individualRepoData.created_at,
+            language: individualRepoData.language,
+            forks: individualRepoData.forks,
+            open_issues: individualRepoData.open_issues,
+            topics: individualRepoData.topics,
+            watchers: individualRepoData.watchers,
+            subscribers_count: individualRepoData.subscribers_count
+        }
+    }
+    });
+
+export const getRepoResult = searchTerm => {
+    return async dispatch => {
+        dispatch(loadingRepo());
+        try {
+            const data = await fetchRepoData(searchTerm);
+            dispatch(loadRepoResult(data))
+        } catch (err) {
+            console.warn(err.message);
+            dispatch({ type: 'SET_ERROR', payload: err.message })
+        };
+    };
+};
+
+const fetchRepoData = async searchTerm => {
+    try {
+        const repoData = await axios.get(`${searchTerm}`)
+        return { repoData } ;
+    } catch (err) {
+        if (data.status === 404) { throw Error('That\'s not a valid repo!') }
         throw new Error(err.message)
     }
 }
