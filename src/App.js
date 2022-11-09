@@ -4,6 +4,7 @@ import Layout from './layouts'
 import { Home, NotFound, User } from './pages'
 
 import "./main.css";
+import { BackButton } from './components';
 
 const App = () => {
   return (
