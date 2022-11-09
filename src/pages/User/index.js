@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import "./style.css";
 
 const User = () => {
-	const loading = useSelector((state) => state.loading);
+	const loadingUser = useSelector((state) => state.loadingUser);
 
 	return (
 		<>
@@ -19,7 +19,7 @@ const User = () => {
 			>
 				<br />
 
-				{loading ? (
+				{loadingUser ? (
 					<img src={loadingGif} alt="Loading" />
 				) : (
 					<>
