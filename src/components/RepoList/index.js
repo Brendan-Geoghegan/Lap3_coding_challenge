@@ -13,7 +13,7 @@ const RepoList = () => {
 				{allReposData.map((repo, index) => (
 					<div className='repo' key={index}>
             <h3>{repo.name}</h3>
-          <a href={repo.url} target='_blank'>link</a>
+          <a href={repo.url} target='_blank'>GitHub</a>
           <p>{repo.forks}</p>
           <hr/>
 					</div>

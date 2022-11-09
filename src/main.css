@@ -25,6 +25,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	color: #619f23;
+}
+
 p {
 	font-weight: 300;
 }
