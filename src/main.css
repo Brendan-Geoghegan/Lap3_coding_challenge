@@ -23,6 +23,7 @@ a {
 	font-weight: 300;
 	color: white;
 	text-decoration: none;
+	transition: 0.3s ease-in-out;
 }
 
 a:hover {
@@ -31,14 +32,20 @@ a:hover {
 
 h3 {
 	color: #58b9f0;
+	transition: 0.3s ease-in-out;
+	margin-bottom: 10px;
+	text-transform: capitalize;
 }
 
 h3:hover {
 	color: #76f058;
+	cursor: pointer;
+	transform: translateX(5px);
 }
 
 p {
 	font-weight: 300;
+	margin-top: 5px;
 }
 
 /* Reusable PageContainer */
@@ -69,8 +76,9 @@ label {
 	width: 100%;
 	border: solid black 1px;
 	border-radius: 5px;
-	font-size: 25px;
+	font-size: 18px;
 	border: solid 1px white;
+	padding: 0.25rem 0.5rem;
 }
 
 #username:hover {
@@ -81,7 +89,7 @@ label {
 	width: 5%;
 	background-color: #619f23;
 	color: white;
-	font-size: 25px;
+	font-size: 20px;
 	border: 1px solid white;
 	border-radius: 5px;
 	text-align: center;
@@ -92,10 +100,13 @@ input[type="submit"] {
 	width: 20%;
 	background-color: #619f23;
 	color: white;
-	font-size: 25px;
+	font-size: 18px;
 	border: 1px solid white;
 	border-radius: 5px;
 	text-align: center;
+	padding: 0.25rem 0.5rem;
+	margin-top: 0.5rem;
+	transition: 0.3s ease-in-out;
 }
 
 input[type="submit"]:hover,
@@ -103,6 +114,7 @@ input[type="submit"]:hover,
 	background-color: white;
 	color: #619f23;
 	border: solid 1px #619f23;
+	cursor: pointer;
 }
 
 form {
