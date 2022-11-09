@@ -1,15 +1,18 @@
-import React from 'react';
-
-import { BackButton, Profile } from '../../components';
+import React from "react";
+import { BackButton, Profile } from "../../components";
+import { useSelector } from "react-redux";
+import loadingGif from "./loading.gif";
 
 const User = () => {
-  return (
-    <>
-      <BackButton />
-      <br/>
-      <Profile />
-    </>
-  )
-}
+	const loading = useSelector((state) => state.loading);
 
-export default User
+	return (
+		<>
+			<BackButton />
+			<br />
+			{loading ? <img src={loadingGif} alt="Loading" /> : <Profile />}
+		</>
+	);
+};
+
+export default User;
