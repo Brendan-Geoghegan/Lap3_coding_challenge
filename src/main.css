@@ -25,6 +25,18 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	color: #76F058;
+}
+
+h3 {
+	color: #58B9F0;
+}
+
+h3:hover {
+	color: #76F058;
+}
+
 p {
 	font-weight: 300;
 }
