@@ -9,7 +9,6 @@ const User = () => {
 	return (
 		<>
 			<BackButton />
-      <Profile />
 			<br />
 			{loading ? <img src={loadingGif} alt="Loading" /> : <Profile />}
       <RepoList />
