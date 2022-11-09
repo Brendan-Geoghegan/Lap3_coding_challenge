@@ -110,7 +110,7 @@ form:not(#label) {
 }
 
 hr {
-	width: 30%;
+	width: 100%;
 	margin: 10px 0;
 }
 
@@ -123,4 +123,9 @@ hr {
 #avatar {
 	border-radius: 50%;
 	width: 15%;
+}
+
+#repoList {
+	margin-left: 5px;
+	width: 50%;
 }
