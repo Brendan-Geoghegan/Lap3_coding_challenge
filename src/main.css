@@ -145,14 +145,10 @@ hr {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 45vw;
 }
 
 #avatar {
 	border-radius: 50%;
 	width: 15%;
-}
-
-#repoList {
-	margin-left: 5px;
-	width: 50%;
 }

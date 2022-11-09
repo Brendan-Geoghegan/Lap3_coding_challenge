@@ -9,27 +9,29 @@ const User = () => {
 	const loading = useSelector((state) => state.loading);
 
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1, transition: { duration: 1 } }}
-			exit={{ opacity: 0 }}
-			className="user-container"
-		>
+		<>
 			<BackButton />
-			<br />
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, transition: { duration: 1 } }}
+				exit={{ opacity: 0 }}
+				className="user-container"
+			>
+				<br />
 
-			{loading ? (
-				<img src={loadingGif} alt="Loading" />
-			) : (
-				<>
-					<Profile />
-					<div>
-						<RepoList />
-						<Repo />
-					</div>
-				</>
-			)}
-		</motion.div>
+				{loading ? (
+					<img src={loadingGif} alt="Loading" />
+				) : (
+					<>
+						<Profile />
+						<div>
+							<RepoList />
+							<Repo />
+						</div>
+					</>
+				)}
+			</motion.div>
+		</>
 	);
 };
 
