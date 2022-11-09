@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { UserForm } from '../../components'
-import image from './github.png'
+import image from '../../../assets/github.png'
 
 const Home = () => {
   return (
