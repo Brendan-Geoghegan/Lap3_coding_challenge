@@ -12,3 +12,7 @@ The GitHub Repo Tracker is a React application connected to the GitHub API. Ente
 ## Usage
 
 - Enter `npm run dev` in the terminal to launch the application.
+
+## Link to Netlify deploy
+
+https://track-your-github-repo.netlify.app/

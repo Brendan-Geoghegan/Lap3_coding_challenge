@@ -1,3 +1,13 @@
 .specific-repo-container {
 	margin-top: 3rem;
+	text-transform: capitalize;
+}
+
+.specific-repo-container p {
+	margin: 10px 0;
+}
+
+.specific-repo-container a {
+	margin: 10px 0;
+	color: #58b9f0;
 }

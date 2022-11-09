@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "../../layouts";
 import { Home, NotFound, User } from "../../pages";
 import { AnimatePresence } from "framer-motion";
+import Repo from "../Repo";
 
 const AnimatedRoutes = () => {
 	const location = useLocation();
@@ -11,7 +12,9 @@ const AnimatedRoutes = () => {
 			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route path="user" element={<User />} />
+					<Route path="user" element={<User />}>
+						<Route path=":repo" element={<Repo />} />
+					</Route>
 					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>
