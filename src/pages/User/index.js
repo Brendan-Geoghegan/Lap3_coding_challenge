@@ -15,7 +15,7 @@ const User = () => {
 			exit={{ opacity: 0 }}
 			className="user-container"
 		>
-			{/* <BackButton /> */}
+			<BackButton />
 			<br />
 
 			{loading ? (
