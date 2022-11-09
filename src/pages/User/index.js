@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+import { BackButton, Profile } from '../../components';
 
 const User = () => {
   return (
-    <div>User</div>
+    <>
+      <BackButton />
+      <br/>
+      <Profile />
+    </>
   )
 }
 

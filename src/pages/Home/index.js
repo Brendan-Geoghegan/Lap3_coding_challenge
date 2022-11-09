@@ -4,10 +4,11 @@ import { UserForm } from '../../components'
 
 const Home = () => {
   return (
-    <>
-    <h1>Welcome!</h1>
+    <div className='main-container'>
+    <h1>GitHub Repo Tracker</h1>
+    <img src='./github.png' alt='GitHub logo' />
     <UserForm />
-    </>
+    </div>
   )
 }
 

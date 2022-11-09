@@ -7,6 +7,8 @@
 }
 body {
 	font-family: "Signika Negative", sans-serif;
+	background-color: #0D1116; /* official github dark mode color */
+	color: white;
 }
 
 h1,
@@ -28,8 +30,86 @@ p {
 
 /* Reusable PageContainer */
 
+label {
+	text-align: left;
+}
+
 .main-container {
-	width: 90%;
-	margin: 0 auto;
-	max-width: 1200px;
+	/* width: 90%; 
+	margin: 0 auto; 
+	max-width: 1200px; */
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 40%;
+	background-color: #161B21; /* official github dark mode color */
+	border-radius: 10px;
+	padding: 50px 0;
+	border: 1px solid white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#username {
+	vertical-align: top;
+    margin: 5px auto;
+    width: 100%;
+    border: solid black 1px;
+    border-radius: 5px;
+    font-size: 25px;
+	border: solid 1px white;
+}
+
+#username:hover {
+	border: solid 1px #619f23;
+}
+
+#back {
+	width: 5%;
+    background-color: #619f23;
+    color: white;
+	font-size: 25px;
+	border: 1px solid white;
+	border-radius: 5px;
+	text-align: center;
+	margin: 5px;
+}
+
+input[type='submit'] {
+	width: 20%;
+    background-color: #619f23;
+    color: white;
+	font-size: 25px;
+	border: 1px solid white;
+	border-radius: 5px;
+	text-align: center;
+}
+
+input[type='submit']:hover, #back:hover {
+	background-color: white;
+	color: #619f23;
+	border: solid 1px #619f23;
+}
+
+form {
+	width: 80%;
+	
+}
+
+form:not(#label) {
+	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 15px;
+	left: 40%;
+}
+
+hr {
+	width: 30%;
+	margin: 10px 0;
 }
