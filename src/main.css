@@ -113,3 +113,14 @@ hr {
 	width: 30%;
 	margin: 10px 0;
 }
+
+#profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#avatar {
+	border-radius: 50%;
+	width: 15%;
+}
