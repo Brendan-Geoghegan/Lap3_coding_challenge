@@ -18,7 +18,7 @@ const Home = () => {
 			}}
 			whileHover={{
 				backgroundColor: "#11151a",
-				boxShadow: "8px 8px 0 rgb(240, 240, 240)",
+				boxShadow: "10px 10px 0 rgb(240, 240, 240)",
 			}}
 		>
 			<h1>GitHub Repo Tracker</h1>
