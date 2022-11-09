@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./style.css";
 
 const Repo = () => {
-  return (
-    <div>Repo</div>
-  )
-}
+	return <div>Repo</div>;
+};
 
-export default Repo
+export default Repo;
