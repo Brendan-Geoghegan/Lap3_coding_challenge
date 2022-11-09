@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { getUserResult } from '../../actions';
+import { useNavigate } from 'react-router-dom';
 
 const UserForm = () => {
   const [ formData, setFormData ] = useState("")
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // dispatch()
+    dispatch(getUserResult(formData))
+    navigate("/user")
   }
 
   return (
