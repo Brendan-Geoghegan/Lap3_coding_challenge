@@ -14,7 +14,7 @@ const RepoList = () => {
 					<div className='repo' key={index}>
             <h3>{repo.name}</h3>
           <a href={repo.url} target='_blank'>GitHub</a>
-          <p>{repo.forks}</p>
+          <p>Forks: {repo.forks}</p>
           <hr/>
 					</div>
 				))}
