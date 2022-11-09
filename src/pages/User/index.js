@@ -24,12 +24,11 @@ const User = () => {
 					<img src={loadingGif} alt="Loading" />
 				) : (
 					<>
-						<Profile />
 						<div>
-							<RepoList />
-							<Repo />
+							<Profile />
               <Outlet />
 						</div>
+            <RepoList />
 					</>
 				)}
 			</motion.div>
