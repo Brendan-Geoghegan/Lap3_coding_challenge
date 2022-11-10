@@ -41,7 +41,7 @@ const Repo = () => {
 				</div>
 				<div className="stat-item">
 					<h3>Language</h3>
-					<p>{individualRepoData.language} || "None..."</p>
+					<p>{individualRepoData.language || "None..."} </p>
 				</div>
 				<div className="stat-item">
 					<h3>Created at</h3>
