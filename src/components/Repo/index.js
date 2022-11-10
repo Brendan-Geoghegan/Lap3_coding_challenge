@@ -16,7 +16,6 @@ const Repo = () => {
 		return singleRepo;
 	});
 	const individualRepoData = useSelector((state) => state.individualRepoResult);
-	console.log(individualRepoData);
 
 	useEffect(() => {
 		dispatch(getRepoResult(allReposData.url));
@@ -38,11 +37,11 @@ const Repo = () => {
 			<div className="repoStats">
 				<div className="stat-item">
 					<h3>Description: </h3>
-					<p>{individualRepoData.description}</p>
+					<p>{individualRepoData.description || "None..."}</p>
 				</div>
 				<div className="stat-item">
 					<h3>Language</h3>
-					<p>{individualRepoData.language}</p>
+					<p>{individualRepoData.language || "None..."} </p>
 				</div>
 				<div className="stat-item">
 					<h3>Created at</h3>
@@ -65,7 +64,9 @@ const Repo = () => {
 					<p>{individualRepoData.subscribers_count}</p>
 				</div>
 				<div className="stat-item">
-					<a href={individualRepoData.html_url} target='_blank'>View in Github</a>
+					<a href={individualRepoData.html_url} target="_blank">
+						View in Github
+					</a>
 				</div>
 			</div>
 			{/* Map over data here*/}

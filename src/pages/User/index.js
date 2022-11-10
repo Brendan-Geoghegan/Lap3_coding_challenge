@@ -1,5 +1,11 @@
 import React from "react";
-import { BackButton, Profile, RepoList, Repo, HomeButton } from "../../components";
+import {
+	BackButton,
+	Profile,
+	RepoList,
+	Repo,
+	HomeButton,
+} from "../../components";
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
@@ -9,7 +15,6 @@ import "./style.css";
 const User = () => {
 	const loadingUser = useSelector((state) => state.loadingUser);
 	const error = useSelector((state) => state.error);
-	
 
 	return (
 		<>
@@ -23,18 +28,19 @@ const User = () => {
 			>
 				<br />
 
-				{error ? <h1 className="centering">GitHub username doesn't exist</h1> : ((loadingUser && error === false) ? (
+				{error ? (
+					<h1 className="centering">GitHub username doesn't exist</h1>
+				) : loadingUser && error === false ? (
 					<img className="centering" src={loadingGif} alt="Loading" />
 				) : (
 					<>
 						<div>
 							<Profile />
-              <Outlet />
+							<Outlet />
 						</div>
-            <RepoList />
+						<RepoList />
 					</>
-				))}
-				
+				)}
 			</motion.div>
 		</>
 	);
