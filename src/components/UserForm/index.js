@@ -14,7 +14,6 @@ const UserForm = () => {
 		e.preventDefault();
 		dispatch(getUserResult(formData));
 		navigate("/user");
-		localStorage.clear();
 	};
 
 	return (

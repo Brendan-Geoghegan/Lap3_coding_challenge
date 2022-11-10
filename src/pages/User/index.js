@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
 	BackButton,
 	Profile,
@@ -9,25 +9,12 @@ import {
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
-import { Outlet, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { getUserResult } from "../../actions";
+import { Outlet } from "react-router-dom";
 import "./style.css";
 
 const User = () => {
 	const loadingUser = useSelector((state) => state.loadingUser);
 	const error = useSelector((state) => state.error);
-
-	const navigate = useNavigate();
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		const username = localStorage.getItem("username");
-		if (username) {
-			dispatch(getUserResult(username));
-			navigate("/user");
-		}
-	}, []);
 
 	return (
 		<>
