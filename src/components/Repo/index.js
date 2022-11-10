@@ -37,11 +37,11 @@ const Repo = () => {
 			<div className="repoStats">
 				<div className="stat-item">
 					<h3>Description: </h3>
-					<p>{individualRepoData.description}</p>
+					<p>{individualRepoData.description || "None..."}</p>
 				</div>
 				<div className="stat-item">
 					<h3>Language</h3>
-					<p>{individualRepoData.language}</p>
+					<p>{individualRepoData.language} || "None..."</p>
 				</div>
 				<div className="stat-item">
 					<h3>Created at</h3>
