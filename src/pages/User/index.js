@@ -9,7 +9,7 @@ import "./style.css";
 const User = () => {
 	const loadingUser = useSelector((state) => state.loadingUser);
 	const error = useSelector((state) => state.error);
-	console.log(("error", error));
+	
 
 	return (
 		<>
