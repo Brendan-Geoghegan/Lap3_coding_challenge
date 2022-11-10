@@ -1,6 +1,7 @@
 .specific-repo-container {
 	margin-top: 3rem;
 	text-transform: capitalize;
+	word-break: break-all;
 	margin-right: 2rem;
 }
 

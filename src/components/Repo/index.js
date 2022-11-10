@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 import { getRepoResult } from "../../actions";
 import { motion } from "framer-motion";
+import moment from 'moment';
 
 const Repo = () => {
 	const dispatch = useDispatch();
@@ -18,8 +19,9 @@ const Repo = () => {
 	console.log(individualRepoData);
 
 	useEffect(() => {
-		dispatch(getRepoResult(allReposData.url));
+		dispatch(getRepoResult(allReposData.url))
 	}, [repo]);
+
 
 	return (
 		<motion.div
@@ -70,6 +72,7 @@ const Repo = () => {
 				<div className="stat-item">
 					<a href={individualRepoData.html_url}>View in Github</a>
 				</div>
+
 			</div>
 			{/* Map over data here*/}
 			<br />
@@ -78,14 +81,3 @@ const Repo = () => {
 };
 
 export default Repo;
-
-// name: "",
-//         html_url: "",
-//         description: "",
-//         created_at: "",
-//         language: "",
-//         forks: 0,
-//         open_issues: 0,
-//         topics: [],
-//         watchers: 0,
-//         subscribers_count: 0
