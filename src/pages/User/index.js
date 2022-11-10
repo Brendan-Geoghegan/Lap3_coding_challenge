@@ -1,5 +1,5 @@
 import React from "react";
-import { BackButton, Profile, RepoList, Repo } from "../../components";
+import { BackButton, Profile, RepoList, Repo, HomeButton } from "../../components";
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
@@ -13,6 +13,7 @@ const User = () => {
 
 	return (
 		<>
+			<HomeButton />
 			<BackButton />
 			<motion.div
 				initial={{ opacity: 0 }}

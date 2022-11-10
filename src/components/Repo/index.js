@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 import { getRepoResult } from "../../actions";
 import { motion } from "framer-motion";
+import moment from 'moment';
 
 const Repo = () => {
 	const dispatch = useDispatch()
@@ -18,8 +19,6 @@ const Repo = () => {
 	useEffect(() => {
 		dispatch(getRepoResult(allReposData.url))
 	}, [repo])
-
-	
 
 	return (
 		<motion.div
@@ -36,7 +35,7 @@ const Repo = () => {
 			<hr />
 			<div className="repoStats">
 				<p>Description: {individualRepoData.description}</p>
-				<p>Created at (YYYY/MM/DD): {individualRepoData.created_at.substring(0, 10)}</p>
+				<p>Created at: {moment(individualRepoData.created_at).format('D-MM-YYYY')}</p>
 				<p>Language: {individualRepoData.language}</p>
 				<p>Fork count: {individualRepoData.forks}</p>
 				<p>Open issues: {individualRepoData.open_issues}</p>

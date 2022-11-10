@@ -102,7 +102,7 @@ label {
 	margin: 5px;
 	position: fixed;
 	top: 5px;
-	left: 5px;
+	right: 5px;
 	padding: 5px;
 }
 
@@ -172,4 +172,20 @@ hr {
 #avatar {
 	border-radius: 50%;
 	width: 40%;
+}
+
+#homeButton {
+	background-color: #0d1116;
+	box-shadow: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 6%;
+}
+
+#error {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
