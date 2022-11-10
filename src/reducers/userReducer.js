@@ -33,7 +33,7 @@ const initState = {
 const userReducer = (state=initState, action) => {
     switch(action.type){
         case 'LOADING_USER':
-            return { ...state, loadingUser: true };
+            return { ...state, loadingUser: true, error: false};
         case 'LOAD_USER_RESULT':
             return { ...state, userResults: action.payload.userData, allRepoResults: action.payload.repoData, loadingUser: false, error: false };
         case 'LOADING_REPO':
@@ -41,7 +41,7 @@ const userReducer = (state=initState, action) => {
         case 'LOAD_REPO_RESULT':
             return { ...state, individualRepoResult: action.payload.individualRepoData, loadingRepo: false, error: false };
         case 'SET_ERROR':
-            return { ...state, error: action.payload, loading: false };
+            return { ...state, error: true, loadingUser: false, loadingRepo: false };
         default:
             return state;
     };

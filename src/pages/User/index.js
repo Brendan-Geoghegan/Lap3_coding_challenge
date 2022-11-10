@@ -8,6 +8,8 @@ import "./style.css";
 
 const User = () => {
 	const loadingUser = useSelector((state) => state.loadingUser);
+	const error = useSelector((state) => state.error);
+	console.log(("error", error));
 
 	return (
 		<>
@@ -21,8 +23,8 @@ const User = () => {
 			>
 				<br />
 
-				{loadingUser ? (
-					<img src={loadingGif} alt="Loading" />
+				{error ? <h1 className="centering">GitHub username doesn't exist</h1> : ((loadingUser && error === false) ? (
+					<img className="centering" src={loadingGif} alt="Loading" />
 				) : (
 					<>
 						<div>
@@ -31,7 +33,8 @@ const User = () => {
 						</div>
             <RepoList />
 					</>
-				)}
+				))}
+				
 			</motion.div>
 		</>
 	);
