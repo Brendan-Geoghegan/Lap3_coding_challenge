@@ -1,5 +1,5 @@
 import React from "react";
-import { BackButton, Profile, RepoList, Repo } from "../../components";
+import { BackButton, Profile, RepoList, Repo, HomeButton } from "../../components";
 import { useSelector } from "react-redux";
 import loadingGif from "./loading.gif";
 import { motion } from "framer-motion";
@@ -8,9 +8,12 @@ import "./style.css";
 
 const User = () => {
 	const loadingUser = useSelector((state) => state.loadingUser);
+	const error = useSelector((state) => state.error);
+	console.log(("error", error));
 
 	return (
 		<>
+			<HomeButton />
 			<BackButton />
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -20,8 +23,8 @@ const User = () => {
 			>
 				<br />
 
-				{loadingUser ? (
-					<img src={loadingGif} alt="Loading" />
+				{error ? <h1 className="centering">GitHub username doesn't exist</h1> : ((loadingUser && error === false) ? (
+					<img className="centering" src={loadingGif} alt="Loading" />
 				) : (
 					<>
 						<div>
@@ -30,7 +33,8 @@ const User = () => {
 						</div>
             <RepoList />
 					</>
-				)}
+				))}
+				
 			</motion.div>
 		</>
 	);

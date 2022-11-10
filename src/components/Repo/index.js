@@ -4,22 +4,24 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 import { getRepoResult } from "../../actions";
 import { motion } from "framer-motion";
+import moment from 'moment';
 
 const Repo = () => {
-	const dispatch = useDispatch()
-	const { repo } =useParams()
+	const dispatch = useDispatch();
+	const { repo } = useParams();
 	const allReposData = useSelector((state) => {
-		const singleRepo = state.allRepoResults.filter(repoData => repoData.name === repo)[0]
-		return singleRepo
+		const singleRepo = state.allRepoResults.filter(
+			(repoData) => repoData.name === repo
+		)[0];
+		return singleRepo;
 	});
-	const individualRepoData = useSelector(state => state.individualRepoResult)
+	const individualRepoData = useSelector((state) => state.individualRepoResult);
 	console.log(individualRepoData);
 
 	useEffect(() => {
 		dispatch(getRepoResult(allReposData.url))
-	}, [repo])
+	}, [repo]);
 
-	
 
 	return (
 		<motion.div
@@ -35,14 +37,42 @@ const Repo = () => {
 			<h2>{individualRepoData.name}</h2>
 			<hr />
 			<div className="repoStats">
-				<p>Description: {individualRepoData.description}</p>
-				<p>Created at (YYYY/MM/DD): {individualRepoData.created_at.substring(0, 10)}</p>
-				<p>Language: {individualRepoData.language}</p>
-				<p>Fork count: {individualRepoData.forks}</p>
-				<p>Open issues: {individualRepoData.open_issues}</p>
-				<p>Watchers: {individualRepoData.watchers}</p>
-				<p>Subscribers: {individualRepoData.subscribers_count}</p>
-				<a href={individualRepoData.html_url}>View in Github</a>
+				<div className="stat-item">
+					<h3>Description: </h3>
+					<p>{individualRepoData.description}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Created at (YYYY/MM/DD)</h3>
+					<p> {individualRepoData.created_at.substring(0, 10)}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Language</h3>
+					<p>{individualRepoData.language}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Created at (YYYY/MM/DD)</h3>
+					<p>{individualRepoData.created_at.substring(0, 10)}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Fork Count</h3>
+					<p>{individualRepoData.forks}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Open Issues</h3>
+					<p>{individualRepoData.open_issues}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Watchers</h3>
+					<p> {individualRepoData.watchers}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Subscribers</h3>
+					<p>{individualRepoData.subscribers_count}</p>
+				</div>
+				<div className="stat-item">
+					<a href={individualRepoData.html_url}>View in Github</a>
+				</div>
+
 			</div>
 			{/* Map over data here*/}
 			<br />
@@ -51,15 +81,3 @@ const Repo = () => {
 };
 
 export default Repo;
-
-
-// name: "",
-//         html_url: "",
-//         description: "",
-//         created_at: "",
-//         language: "",
-//         forks: 0,
-//         open_issues: 0,
-//         topics: [],
-//         watchers: 0,
-//         subscribers_count: 0

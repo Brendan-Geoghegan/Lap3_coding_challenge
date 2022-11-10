@@ -34,7 +34,7 @@ export const getUserResult = searchTerm => {
             dispatch(loadUserResult(data))
         } catch (err) {
             console.warn(err.message);
-            dispatch({ type: 'SET_ERROR', payload: err.message })
+            dispatch({ type: 'SET_ERROR' })
         };
     };
 };
