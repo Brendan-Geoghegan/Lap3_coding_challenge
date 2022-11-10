@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 import { getRepoResult } from "../../actions";
 import { motion } from "framer-motion";
-import moment from 'moment';
+import moment from "moment";
 
 const Repo = () => {
 	const dispatch = useDispatch();
@@ -19,9 +19,8 @@ const Repo = () => {
 	console.log(individualRepoData);
 
 	useEffect(() => {
-		dispatch(getRepoResult(allReposData.url))
+		dispatch(getRepoResult(allReposData.url));
 	}, [repo]);
-
 
 	return (
 		<motion.div
@@ -42,12 +41,12 @@ const Repo = () => {
 					<p>{individualRepoData.description}</p>
 				</div>
 				<div className="stat-item">
-					<h3>Created at</h3>
-					<p> {moment(individualRepoData.created_at).format('D-MM-YYYY')}</p>
-				</div>
-				<div className="stat-item">
 					<h3>Language</h3>
 					<p>{individualRepoData.language}</p>
+				</div>
+				<div className="stat-item">
+					<h3>Created at</h3>
+					<p> {moment(individualRepoData.created_at).format("D-MM-YYYY")}</p>
 				</div>
 				<div className="stat-item">
 					<h3>Fork Count</h3>
@@ -68,7 +67,6 @@ const Repo = () => {
 				<div className="stat-item">
 					<a href={individualRepoData.html_url}>View in Github</a>
 				</div>
-
 			</div>
 			{/* Map over data here*/}
 			<br />
