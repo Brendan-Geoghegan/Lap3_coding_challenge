@@ -65,7 +65,7 @@ const Repo = () => {
 					<p>{individualRepoData.subscribers_count}</p>
 				</div>
 				<div className="stat-item">
-					<a href={individualRepoData.html_url}>View in Github</a>
+					<a href={individualRepoData.html_url} target='_blank'>View in Github</a>
 				</div>
 			</div>
 			{/* Map over data here*/}
