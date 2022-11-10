@@ -42,16 +42,12 @@ const Repo = () => {
 					<p>{individualRepoData.description}</p>
 				</div>
 				<div className="stat-item">
-					<h3>Created at (YYYY/MM/DD)</h3>
-					<p> {individualRepoData.created_at.substring(0, 10)}</p>
+					<h3>Created at</h3>
+					<p> {moment(individualRepoData.created_at).format('D-MM-YYYY')}</p>
 				</div>
 				<div className="stat-item">
 					<h3>Language</h3>
 					<p>{individualRepoData.language}</p>
-				</div>
-				<div className="stat-item">
-					<h3>Created at (YYYY/MM/DD)</h3>
-					<p>{individualRepoData.created_at.substring(0, 10)}</p>
 				</div>
 				<div className="stat-item">
 					<h3>Fork Count</h3>
