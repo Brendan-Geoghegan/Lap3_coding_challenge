@@ -5,12 +5,10 @@ const Profile = () => {
   const user = useSelector(prev => prev.userResults)
 
   return (
-    <div id='profile'>
-      <img id='avatar' src={user.avatar_url} alt='Profile Image' />
-      <h1>{user.login}</h1>
-      <p>{user.followers} followers • {user.following} following</p>
-      {/* <h2>Organisations</h2>
-      <img src='' alt='Organisation logo' border-radius='5px' /> */}
+    <div role="main" id='profile'>
+      <img role="img" id='avatar' src={user.avatar_url} alt='Profile Image' />
+      <h1 role="heading">{user.login}</h1>
+      <p role="section">{user.followers} followers • {user.following} following</p>
     </div>
   )
 }
