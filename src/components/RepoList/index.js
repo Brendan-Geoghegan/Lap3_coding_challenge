@@ -13,7 +13,7 @@ const RepoList = () => {
 				{allReposData.map((repo, index) => (
 					<div className="repo" key={index}>
 						<NavLink to={repo.name}><h3>{repo.name}</h3></NavLink>
-						<a href={repo.url} target="_blank">
+						<a href={repo.html_url} target="_blank">
 							GitHub
 						</a>
 						<p>Forks: {repo.forks}</p>
