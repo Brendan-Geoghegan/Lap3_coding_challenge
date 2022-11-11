@@ -19,7 +19,7 @@ const loadUserResult = ({ userData, repoData }) => ({
             return {
                 name: data.name,
                 url: data.url,
-                html_url: data.url,
+                html_url: data.html_url,
                 forks: data.forks_count
             }
         })
