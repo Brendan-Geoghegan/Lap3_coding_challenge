@@ -4,9 +4,9 @@
 
 The GitHub Repo Tracker is a React application connected to the GitHub API. Enter a GitHub username to find a list of their public repositories. You can click on the title of any of these repositories to view more information.
 
-## Link to Netlify deploy
+## Deployment
 
-https://track-your-github-repo.netlify.app/
+- <a href="https://track-your-github-repo.netlify.app/" target="_blank">Netlify</a>
 
 ## Installation
 
