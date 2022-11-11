@@ -31,6 +31,7 @@ const Repo = () => {
 				translateX: "0%",
 				transition: { duration: 1.2 },
 			}}
+			role="main"
 		>
 			<h2>{individualRepoData.name}</h2>
 			<hr />
@@ -63,13 +64,12 @@ const Repo = () => {
 					<h3>Subscribers</h3>
 					<p>{individualRepoData.subscribers_count}</p>
 				</div>
-				<div className="stat-item">
-					<a href={individualRepoData.html_url} target="_blank">
+				
+					<a className="stat-item" href={individualRepoData.html_url} target="_blank">
 						View in Github
 					</a>
-				</div>
+				
 			</div>
-			{/* Map over data here*/}
 			<br />
 		</motion.div>
 	);
