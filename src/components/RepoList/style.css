@@ -1,0 +1,16 @@
+#repos {
+	height: 67vh;
+	overflow-y: scroll;
+	padding: 1rem;
+	width: 45vw;
+	word-break: break-all;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	height: 10px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	background-image: linear-gradient(to top, #58b9f0 20%, white 100%);
+}
